@@ -39,7 +39,7 @@ class BasePageBoard {
         board.push()
         board.noStroke();
         board.fill(255);
-        board.rect(0, 0, windowWidth-100, windowHeight-270, rectCorners);
+        board.rect(0, 0, BOARD_WIDTH, BOARD_HEIGHT, rectCorners);
         board.pop();
     }
     cleanBoard(){

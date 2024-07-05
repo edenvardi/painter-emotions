@@ -8,10 +8,14 @@ let board;
 let rectCorners = 12;
 let selectedPage = 1;
 let PINK_COLOR = '#FF66C4';
+let BOARD_WIDTH;
+let BOARD_HEIGHT;
 
 function setup() {
     screen = createGraphics(windowWidth, windowHeight);
     board = createGraphics(windowWidth - 100, windowHeight - 270);
+    BOARD_WIDTH = windowWidth-100;
+    BOARD_HEIGHT = windowHeight-270;
     rectMode(CENTER);
     createCanvas(windowWidth, windowHeight);
     background(PINK_COLOR);

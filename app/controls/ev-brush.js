@@ -4,20 +4,28 @@ class BaseBrush {
     mouseXPrev;
     mouseYPrev;
     particles = [];
+    boardMouseX;
+    boardMouseY;
 
     isMouseOver() {
-        const result = 50 < mouseX && mouseX < windowWidth - 100 &&
-            100 < mouseY && mouseY < windowHeight - 300;
+        const result = 50 < mouseX && mouseX < BOARD_WIDTH+50 &&
+            100 < mouseY && mouseY < BOARD_HEIGHT+100;
         return result;
     }
 
     isDraw() {
         return this.isDrawing && this.isSelected && this.isMouseOver();
     }
-
+    updateMouseXY(){
+        if(this.isMouseOver()) {
+            this.boardMouseX = map(mouseX, 50, BOARD_WIDTH + 50, 0, BOARD_WIDTH);
+            this.boardMouseY = map(mouseY, 100, BOARD_HEIGHT + 100, 0, BOARD_HEIGHT);
+        }
+    }
     draw() {
         if (this.isDraw()) {
             board.push();
+            this.updateMouseXY()
             this.innerDraw();
             board.pop();
         }
@@ -28,8 +36,8 @@ class BaseBrush {
 
     mousePressed() {
         this.isDrawing = true;
-        this.mouseXPrev = mouseX;
-        this.mouseYPrev = mouseY;
+        this.mouseXPrev = this.boardMouseX;
+        this.mouseYPrev = this.boardMouseY;
     }
 
     mouseReleased() {
@@ -55,12 +63,12 @@ class HappyBrush extends BaseBrush {
         for (let i = 0; i < 6; i++) { // Number of branches
             let angle = i * 60; // Angle for each branch
             let length = random(10, 5); // Initial branch length
-            this.drawBranch(mouseX, mouseY, angle, length);
+            this.drawBranch(this.boardMouseX, this.boardMouseY, angle, length);
 
         }
 
-        this.mouseXPrev = mouseX;
-        this.mouseYPrev = mouseY;
+        this.mouseXPrev = this.boardMouseX;
+        this.mouseYPrev = this.boardMouseY;
     }
 
     drawBranch(x, y, angle, length) {
@@ -78,7 +86,6 @@ class HappyBrush extends BaseBrush {
         }
       }
 }
-
 
 class SadParticle{
   gravity  = 0.15; // Gravity-like force pulling particles downwards
@@ -125,7 +132,7 @@ class SadBrush extends BaseBrush{
       if (mouseIsPressed) {
           let sprayDirection = createVector(random(-1, 1), random(-1, 0));
           sprayDirection.setMag(this.sprayForce);
-          let particle = new SadParticle(mouseX, mouseY, sprayDirection);
+          let particle = new SadParticle(this.boardMouseX, this.boardMouseY, sprayDirection);
           this.particles.push(particle);
       }
 
@@ -185,7 +192,7 @@ class AngruyBrush extends BaseBrush{
       // Add new particles when mouse is pressed
       if (mouseIsPressed) {
           for (let i = 0; i < 10; i++) {
-              let p = new AngryParticle(mouseX, mouseY);
+              let p = new AngryParticle(this.boardMouseX, this.boardMouseY);
               this.particles.push(p);
           }
 
@@ -209,8 +216,8 @@ class FearBrush extends BaseBrush{
 
   innerDraw() {
       let newLetter = this.getRandomLetter();
-      let newX = mouseX - 12;
-      let newY = mouseY - 32;
+      let newX = this.boardMouseX - 12;
+      let newY = this.boardMouseY - 32;
       this.particles.push({letter: newLetter, x: newX, y: newY}); // Store letter and position
 
       // Draw letters along the line segments
@@ -233,8 +240,8 @@ class PandaBrush extends BaseBrush{
   brushSize = 50;
   brushPressure = 1.5; // Controls paint thickness
 
-  innerDraw() {      let dx = mouseX - this.previousX;
-      let dy = mouseY - this.previousY;
+  innerDraw() {      let dx = this.boardMouseX - this.previousX;
+      let dy = this.boardMouseY - this.previousY;
       let angle = atan2(dy, dx); // Calculate direction for brush stroke
       let roughness = random(1); // Randomness for a textured look
 
@@ -250,7 +257,7 @@ class PandaBrush extends BaseBrush{
           board.line(strokeX, strokeY, strokeX + cos(angle), strokeY + sin(angle));
       }
 
-      this.previousX = mouseX;
-      this.previousY = mouseY;
+      this.previousX = this.boardMouseX;
+      this.previousY = this.boardMouseY;
   }
 }
