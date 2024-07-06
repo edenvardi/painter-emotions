@@ -3,7 +3,7 @@ class RejectionShape {
         this.x = x;
         this.y = y;
         this.size = random(30, 60);
-        this.color = color("#E70DEA");
+        this.color = color(random(0,260),30,180,150);
         this.speedX = random(-5, 5);
         this.speedY = random(-5, 5);
         this.rotation = 0;
