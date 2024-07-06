@@ -46,6 +46,7 @@ class BasePageBoard {
         print('CLEAN BOARD');
         board.background("#FF66C4");
         board.rect(0, 0, windowWidth-100, windowHeight-200, 10);
+        Object.values(this.brushes).forEach( b => b.clean());
     }
     cleanScreen(){
         screen.background(PINK_COLOR);

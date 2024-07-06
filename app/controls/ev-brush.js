@@ -22,6 +22,9 @@ class BaseBrush {
             this.boardMouseY = map(mouseY, 100, BOARD_HEIGHT + 100, 0, BOARD_HEIGHT);
         }
     }
+    clean(){
+        this.particles = [];
+    }
     draw() {
         if (this.isDraw()) {
             board.push();
