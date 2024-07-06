@@ -5,7 +5,7 @@ class Toolbox{
 
 
     constructor(onClick){
-        let names = ['happy','sad','angry','fear','panda','crezy','lazy'];
+        let names = ['happy','sad','angry','fear','panda','joyful','lazy'];
         let dest = 120;
         this.buttons = {};
         let x = this.x - dest* (names.length-1)/2;
@@ -21,7 +21,7 @@ class Toolbox{
         this.buttons.angryBtn.selectedColor = '#FF3131';
         this.buttons.fearBtn.selectedColor  = '#D67BF0';
         this.buttons.pandaBtn.selectedColor  ='#FCA40E';
-        this.buttons.crezyBtn.selectedColor = '#7ED957';
+        this.buttons.joyfulBtn.selectedColor = '#7ED957';
         this.buttons.lazyBtn.selectedColor = '#F954C1';
 
 
@@ -30,7 +30,7 @@ class Toolbox{
         this.buttons.angryBtn.color         = '#E03131';
         this.buttons.fearBtn.color          = '#B54DD3';
         this.buttons.pandaBtn.color         = '#E07606';
-        this.buttons.crezyBtn.color         = '#69BA47';
+        this.buttons.joyfulBtn.color         = '#69BA47';
         this.buttons.lazyBtn.color          = '#E3129C';
 
     }

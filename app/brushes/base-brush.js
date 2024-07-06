@@ -38,7 +38,7 @@ class BaseBrush {
     }
 
     innerDraw() {
-    };
+    }
 
     mousePressed() {
         this.isDrawing = true;

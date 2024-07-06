@@ -13,6 +13,7 @@ class BasePageBoard {
             angry: new AngryBrush(),
             happy: new HappyBrush(),
             panda: new PandaBrush(),
+            joyful: new JoyfulBrush(),
         };
     }
 
