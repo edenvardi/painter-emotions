@@ -1,3 +1,4 @@
+
 class RejectionShape {
     constructor(x, y) {
         this.x = x;
