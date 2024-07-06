@@ -17,18 +17,21 @@ class Toolbox{
         });
 
         this.buttons.happyBtn.selectedColor = '#F7E232';
-        this.buttons.sadBtn.selectedColor   = '#0B67B3';
-        this.buttons.angryBtn.selectedColor = '#C7251A';
-        this.buttons.fearBtn.selectedColor  = 'orange';
-        this.buttons.pandaBtn.selectedColor = 'orange';
+        this.buttons.sadBtn.selectedColor   = '#379FF5';
+        this.buttons.angryBtn.selectedColor = '#FF3131';
+        this.buttons.fearBtn.selectedColor  = '#D67BF0';
+        this.buttons.pandaBtn.selectedColor  ='#FCA40E';
+        this.buttons.crezyBtn.selectedColor = '#7ED957';
+        this.buttons.lazyBtn.selectedColor = '#F954C1';
+
 
         this.buttons.happyBtn.color         = '#ECD721';
         this.buttons.sadBtn.color           = '#0B67B3';
-        this.buttons.angryBtn.color         = '#C7251A';
-        this.buttons.fearBtn.color          = '#5237AF';
-        this.buttons.pandaBtn.color         = 'orange';
-        this.buttons.crezyBtn.color         = 'green';
-        this.buttons.lazyBtn.color          = 'pink';
+        this.buttons.angryBtn.color         = '#E03131';
+        this.buttons.fearBtn.color          = '#B54DD3';
+        this.buttons.pandaBtn.color         = '#E07606';
+        this.buttons.crezyBtn.color         = '#69BA47';
+        this.buttons.lazyBtn.color          = '#E3129C';
 
     }
 

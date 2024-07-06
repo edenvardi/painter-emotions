@@ -27,7 +27,7 @@ class EvTopToolbar {
     draw(){
         screen.fill('#FFF859')
         screen.noStroke()
-        screen.rect(50,this.y,450,53,rectCorners);  
+        screen.rect(50,this.y,590,53,rectCorners);  
         this.titleTxt.draw();
         this.saveBtn.draw();
         this.cleanBtn.draw();

@@ -187,23 +187,28 @@ class AngryParticle{
 class AngruyBrush extends BaseBrush{
 
   innerDraw() {
-      // background(0); // Black background
+   
       board.colorMode(HSB);
+    
       // Add new particles when mouse is pressed
       if (mouseIsPressed) {
           for (let i = 0; i < 10; i++) {
               let p = new AngryParticle(this.boardMouseX, this.boardMouseY);
               this.particles.push(p);
+      
           }
-
+         
           // Update and display particles
+         
           for (let i = this.particles.length - 1; i >= 0; i--) {
               this.particles[i].update();
               this.particles[i].show();
+          
 
               // Remove particles if they are faded out
               if (this.particles[i].finished()) {
                   this.particles.splice(i, 1);
+                 
               }
           }
       }
