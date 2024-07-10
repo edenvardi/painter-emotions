@@ -5,7 +5,7 @@ class Toolbox{
 
 
     constructor(onClick){
-        let names = ['happy','sad','angry','fear','panda','joyful','shape'];
+        let names = ['Happy','Sad','Angry','Fear','Extra','Surprise','Magic'];
         let dest = 120;
         this.buttons = {};
         let x = this.x - dest* (names.length-1)/2;
@@ -16,22 +16,22 @@ class Toolbox{
             x += dest;
         });
 
-        this.buttons.happyBtn.selectedColor = '#F7E232';
-        this.buttons.sadBtn.selectedColor   = '#379FF5';
-        this.buttons.angryBtn.selectedColor = '#FF3131';
-        this.buttons.fearBtn.selectedColor  = '#D67BF0';
-        this.buttons.pandaBtn.selectedColor  ='#FCA40E';
-        this.buttons.joyfulBtn.selectedColor = '#7ED957';
-        this.buttons.shapeBtn.selectedColor = '#F954C1';
+        this.buttons.HappyBtn.selectedColor = '#F7E232';
+        this.buttons.SadBtn.selectedColor   = '#379FF5';
+        this.buttons.AngryBtn.selectedColor = '#FF3131';
+        this.buttons.FearBtn.selectedColor  = '#D67BF0';
+        this.buttons.ExtraBtn.selectedColor  ='#FCA40E';
+        this.buttons.SurpriseBtn.selectedColor = '#7ED957';
+        this.buttons.MagicBtn.selectedColor = '#F954C1';
 
 
-        this.buttons.happyBtn.color         = '#ECD721';
-        this.buttons.sadBtn.color           = '#0B67B3';
-        this.buttons.angryBtn.color         = '#E03131';
-        this.buttons.fearBtn.color          = '#B54DD3';
-        this.buttons.pandaBtn.color         = '#E07606';
-        this.buttons.joyfulBtn.color         = '#69BA47';
-        this.buttons.shapeBtn.color          = '#E3129C';
+        this.buttons.HappyBtn.color         = '#ECD721';
+        this.buttons.SadBtn.color           = '#0B67B3';
+        this.buttons.AngryBtn.color         = '#E03131';
+        this.buttons.FearBtn.color          = '#B54DD3';
+        this.buttons.ExtraBtn.color         = '#E07606';
+        this.buttons.SurpriseBtn.color         = '#69BA47';
+        this.buttons.MagicBtn.color          = '#E3129C';
 
     }
 

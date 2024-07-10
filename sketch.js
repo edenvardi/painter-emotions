@@ -6,7 +6,7 @@ let endPage;
 let screen;
 let board;
 let rectCorners = 12;
-let selectedPage = 1;
+let selectedPage = 0;
 let PINK_COLOR = '#FF66C4';
 let BOARD_WIDTH;
 let BOARD_HEIGHT;

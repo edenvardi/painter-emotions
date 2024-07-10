@@ -8,13 +8,13 @@ class BasePageBoard {
         this.toolbox = new Toolbox(this.onClickBrush.bind(this));
 
         this.brushes = {
-            sad   : new SadBrush(),
-            fear  : new FearBrush(),
-            angry : new AngryBrush(),
-            happy : new HappyBrush(),
-            panda : new PandaBrush(),
-            joyful: new JoyfulBrush(),
-            shape : new ShapeBrush(),
+            Sad   : new SadBrush(),
+            Fear  : new FearBrush(),
+            Angry : new AngryBrush(),
+            Happy : new HappyBrush(),
+            Extra : new PandaBrush(),
+            Surprise: new JoyfulBrush(),
+            Magic : new ShapeBrush(),
         };
     }
 
