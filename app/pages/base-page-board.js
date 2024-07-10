@@ -8,13 +8,13 @@ class BasePageBoard {
         this.toolbox = new Toolbox(this.onClickBrush.bind(this));
 
         this.brushes = {
-            sad   : new SadBrush(),
-            fear  : new FearBrush(),
-            angry : new AngryBrush(),
-            happy : new HappyBrush(),
-            panda : new PandaBrush(),
-            joyful: new JoyfulBrush(),
-            shape : new ShapeBrush(),
+            Sad   : new SadBrush(),
+            Fear  : new FearBrush(),
+            Angry : new AngryBrush(),
+            Happy : new HappyBrush(),
+            Extra : new PandaBrush(),
+            Surprise: new JoyfulBrush(),
+            Magic : new ShapeBrush(),
         };
     }
 
@@ -52,7 +52,7 @@ class BasePageBoard {
     cleanBoard() {
         print('CLEAN BOARD');
         board.background("#FF66C4");
-        board.rect(0, 0, windowWidth - 100, windowHeight - 200, 10);
+        board.rect(0, 0, windowWidth - 100, windowHeight - 270, 10);
         Object.values(this.brushes).forEach(b => b.clean());
     }
 

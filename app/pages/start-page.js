@@ -22,7 +22,7 @@ class StartPage{
         this.welcomeTxt.draw();
         this.particles.draw();
         screen.fill(0)
-        screen.text('Or click on the screen',windowWidth/2-60,windowHeight/2+150)
+        screen.text('Or click and drag on the screen',windowWidth/2-90,windowHeight/2+150)
         screen.textSize(13);
         image(screen, 0, 0, windowWidth, windowHeight);
         pop();

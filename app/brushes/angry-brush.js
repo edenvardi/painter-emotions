@@ -6,7 +6,7 @@ class AngryParticle {
         this.vx = random(-5, 5); // Random horizontal velocity
         this.vy = random(-5, 5); // Random vertical velocity
         this.alpha = 255; // Initial opacity
-        this.color = color(random(0, 50), 100, 100, this.alpha); // Random color in HSB
+        this.color = color(random(250,125),0,0); 
         this.size = random(5, 15); // Random size
         this.gravity = 0.1; // Gravity-like acceleration
         this.drag = 0.90; // Air resistance

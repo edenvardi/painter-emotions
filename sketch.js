@@ -6,7 +6,7 @@ let endPage;
 let screen;
 let board;
 let rectCorners = 12;
-let selectedPage = 1;
+let selectedPage = 0;
 let PINK_COLOR = '#FF66C4';
 let BOARD_WIDTH;
 let BOARD_HEIGHT;
@@ -22,10 +22,13 @@ function setup() {
 
     //// create pages
     startPage = new StartPage(onNextPage);
+    endPage = new EndPage(onNextPage);
+    initPagesDraw();
+}
+function initPagesDraw(){
     howDayPage = new HowDayPage(onNextPage);
     drawYourselfPage = new DrawYourselfPage(onNextPage);
     howFeelPage = new HowFeelPage(onNextPage);
-    endPage = new EndPage(onNextPage);
 }
 
 function draw() {
@@ -45,6 +48,7 @@ function draw() {
             break;
         case 4:
             endPage.draw();
+            initPagesDraw();
             break;
     }
 }
