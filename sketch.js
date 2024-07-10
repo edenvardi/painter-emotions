@@ -22,10 +22,13 @@ function setup() {
 
     //// create pages
     startPage = new StartPage(onNextPage);
+    endPage = new EndPage(onNextPage);
+    initPagesDraw();
+}
+function initPagesDraw(){
     howDayPage = new HowDayPage(onNextPage);
     drawYourselfPage = new DrawYourselfPage(onNextPage);
     howFeelPage = new HowFeelPage(onNextPage);
-    endPage = new EndPage(onNextPage);
 }
 
 function draw() {
@@ -45,6 +48,7 @@ function draw() {
             break;
         case 4:
             endPage.draw();
+            initPagesDraw();
             break;
     }
 }
