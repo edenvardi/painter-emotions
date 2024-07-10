@@ -65,6 +65,9 @@ class BasePageBoard {
         this.toolbox.mousePressed();
         Object.values(this.brushes).forEach(brush => brush.mousePressed());
     }
+    mouseDragged(){
+        this.mousePressed();
+    }
 
     mouseReleased() {
         Object.values(this.brushes).forEach(brush => brush.mouseReleased());

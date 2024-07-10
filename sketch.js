@@ -79,13 +79,13 @@ function mouseDragged() {
             startPage.mouseDragged();
             break;
         case 1:
-            //howDayPage.mouseDragged();
+            howDayPage.mouseDragged();
             break;
         case 2:
-            //drawYourselfPage.mouseDragged();
+            drawYourselfPage.mouseDragged();
             break;
         case 3:
-            //howFeelPage.mouseDragged();
+            howFeelPage.mouseDragged();
             break;
         case 4:
             endPage.mouseDragged();
