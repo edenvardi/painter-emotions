@@ -72,25 +72,12 @@ function mousePressed() {
             break;
     }
 }
+function touchStarted() {
+    this.mousePressed();
+}
 
 function mouseDragged() {
-    switch (selectedPage) {
-        case 0:
-            startPage.mouseDragged();
-            break;
-        case 1:
-            howDayPage.mouseDragged();
-            break;
-        case 2:
-            drawYourselfPage.mouseDragged();
-            break;
-        case 3:
-            howFeelPage.mouseDragged();
-            break;
-        case 4:
-            endPage.mouseDragged();
-            break;
-    }
+   this.mousePressed();
 }
 
 function mouseClicked() {
