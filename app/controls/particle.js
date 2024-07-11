@@ -1,14 +1,14 @@
 
 class Particle {
     constructor(x, y) {
-          //En el constructor creamos 3 vectores: pos, vel y acc
+      //En el constructor creamos 3 vectores: pos, vel y acc
       this.pos = createVector(x, y);
       this.vel = createVector(random(-1, 1), random(-1, 1));
       this.acc = createVector(0, 0);
-          //Tambíen guardamos el límite máximo de velocidad y fuerza con la que se repele y atrae
+      //Tambíen guardamos el límite máximo de velocidad y fuerza con la que se repele y atrae
       this.maxSpeed = random(0.5, 10);
       this.maxForce = random(0.01, 0.5);
-          //Por último las variables de color y radio del círculo
+      //Por último las variables de color y radio del círculo
       this.color = color(random(255), random(255), random(255), random(100, 255));
       this.radius = random(1, 80);
     }
